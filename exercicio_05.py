@@ -32,9 +32,9 @@ preenche_form(firefox, **form)
 
 # -------------- parte 2
 sleep(2)
-dict_text_area = eval(firefox.find_element_by_tag_name('textarea').text)
+dict_text_area = eval(firefox.find_element_by_tag_name('textarea').text) #eval executa o codigo dentro de si mesmo.
 
-dict_text_url = dict(parse_qsl(urlparse(firefox.current_url).query))
+dict_text_url = dict(parse_qsl(urlparse(firefox.current_url).query)) #dict: usada para construir dicionarios e requer como paramentros uma lista de tuplas ou uma sequencia de itens
 
 dict_text_url.pop('btn')
 
